@@ -34,11 +34,201 @@ a{
   margin: 20px auto;
 
 }
-/* end of gap styles */
 
 .gap-logo{
   height: 45px;
 }
+/* end of gap styles */
+
+/* slider styles */
+.slideshow{
+  width: 100%;
+  min-height: 30em;
+  height: 100vh;
+  position: relative;
+  background-image: url(assets/images/kafari-canyon-4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s;
+}
+.caption{
+  background: linear-gradient(rgba(0,0,0,0)),#000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 4em 1em 2em 1em;
+  text-align: center;
+}
+.caption h3 {
+  color: white;
+  margin: 0;
+}
+
+.caption p {
+  color: white;
+}
+
+.arrow-left ,
+.arrow-right{
+  background: #fff;
+  position: absolute;
+  top: 40%;
+  width: 3em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.arrow-left{
+  left: 1em;
+}
+.arrow-right{
+  right: 1em;
+
+}
+.image-fade{
+  animation: imgFade 0.5s ease-in-out;
+}
+
+@keyframes imgFade  {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end of slider styles */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* map section */
+
+#map{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+}
+.map{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+#map h3 {
+  margin: 15px;
+}
+
+
+/* end of map section */
+
+
+
+/* gallery styles */
+
+
+#gallery{
+  width: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+  grid-gap: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: rgb(48, 224, 4);
+background: linear-gradient(90deg, rgb(243, 64, 61) 24%, rgb(63, 215, 235) 100%);
+
+
+}
+
+.gallery-item{
+  width: 300px;
+  height: 350px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 1s ease;
+
+}
+
+.gallery-item:hover{
+  transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* end of gallery styles */
+
+/* news */
+.news{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px ;
+}
+.news-right{
+  width: 50%;
+}
+.news-left{
+  width: 50%;
+}
+
+
+
+
+
+
 
 
 
@@ -49,13 +239,17 @@ a{
 
 #footer{
   width: 100%;
-  height: 20vh;
+  height: 30vh;
   padding: 10px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: rgb(4, 224, 217);
+  background: linear-gradient(90deg, rgb(61, 243, 70) 24%, rgb(63, 215, 235) 100%);
+  
+  
 
 }
 
@@ -99,13 +293,265 @@ a{
   bottom: 10px;
   right: 5px;
   padding: 2px 16px;
-  background-color: black;
+  background-color: rgb(125, 120, 120);
   color: white;
   font-size: 30px;
   border: none;
   outline: none;
-  border-radius: 50%;
+  border-radius: 20px;
   cursor: pointer;
 }
 
 /* end of scroll btn styles */
+
+
+
+
+
+/* header */
+.navbar{
+  background-color: rgb(30, 147, 30);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.navbar ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.navbar ul li {
+list-style: none;
+margin: 0 20px;
+}
+.navbar ul li a {
+  color: white;
+
+}
+
+
+/* slideshow */
+/* gallery */
+
+.gallery-header{
+  text-align: center;
+}
+
+.gallery-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background-color: rgba(241, 218, 190, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+
+}
+
+
+.slider-wrapper{
+position: relative;
+
+}
+.slider-button{
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  transform: translateY(-50%);
+
+}
+.slider-button:hover{
+  background-color: white;
+  color: black;
+}
+
+
+
+.slider-button span{
+  font-size: 2rem;
+
+}
+#prev-slide{
+left: -20px;
+
+}
+#next-slide{
+right: -20px;
+}
+
+.slider-container{
+  max-width: 1200px;
+  width: 100%;
+}
+
+
+
+
+
+
+.slider-wrapper .img-list{
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(10 , 1fr);
+  font-size: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-bottom: 30px;
+
+}
+.slider-wrapper .img-list::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+
+
+
+.slider-wrapper .img-list .img-item {
+  width: 325px;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* gallery */
+
+/* slideshow */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end of header */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 968px;
+  overflow: hidden;
+}
+
+.card {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 375px;
+  justify-content: center;
+  position: relative;
+  width: 300px;
+  
+  &.card-1 {
+    background: url(assets/images/flower-purple-lical-blosso.jpg) no-repeat center;
+  }
+  
+  &.card-2 {
+    background: url(assets/images/flower-purple-lical-blosso.jpg) no-repeat center;
+  }
+  
+  &.card-3 {
+    background: url(assets/images/flower-purple-lical-blosso.jpg) no-repeat center;
+  }
+  
+  &::after {
+    background: rgb(249, 247, 247 , 0.7);
+    content: '';
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: all 300ms ease-in;
+    width: 100%;
+  }
+  
+  &:hover::after, &:hover .project-title, &:hover .project-subtitle {
+    opacity: 1;
+  }
+  
+  .project-title {
+    color: white;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    padding: 10px 0;
+    z-index: 10;
+  }
+  
+  .project-subtitle {
+    color: black;
+    display: block;  
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0;
+    padding: 10px 0;
+    z-index: 10; 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
