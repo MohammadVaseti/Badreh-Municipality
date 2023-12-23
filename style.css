@@ -3,6 +3,12 @@
   src: url(assets/fonts/vazir-font-v16.1.0/Vazir.ttf);
 }
 
+@font-face {
+  font-family: nast;
+  src: url(assets/fonts/IranNastaliq/IranNastaliq.ttf);
+}
+
+
 
 
 *{
@@ -22,6 +28,60 @@ a{
   width: 100%;
   position: relative;
 }
+
+/* header */
+.navbar{
+  background-color: #16a287;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.navbar ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 0;
+}
+
+.navbar ul li {
+list-style: none;
+margin: 0 20px;
+}
+.navbar ul li a {
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+
+}
+
+.navbar ul li a:hover{
+  background-color: rgb(43, 241, 172);
+}
+
+.nav-right h2{
+  margin-right: 35px;
+  color: white;
+  font-family: nast;
+  font-size: 50px;
+}
+
+
+
+
+.search-icon{
+  font-size: 20px;
+  color: white;
+  margin-left: 50px;
+}
+
+
+
+
 /* gap styles */
 .gap{
   display: flex;
@@ -43,8 +103,7 @@ a{
 /* slider styles */
 .slideshow{
   width: 100%;
-  min-height: 30em;
-  height: 100vh;
+  height: 80vh;
   position: relative;
   background-image: url(assets/images/kafari-canyon-4.jpg);
   background-size: cover;
@@ -53,21 +112,25 @@ a{
   transition: 0.3s;
 }
 .caption{
+  width: 20%;
   background: linear-gradient(rgba(0,0,0,0)),#000;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 4em 1em 2em 1em;
-  text-align: center;
 }
 .caption h3 {
   color: white;
   margin: 0;
+  font-size: 20px;
+
 }
 
 .caption p {
   color: white;
+  font-size: 20px;
+
 }
 
 .arrow-left ,
@@ -82,7 +145,25 @@ a{
   align-items: center;
   transition: 0.3s;
   cursor: pointer;
+  border-radius: 50%;
+  font-size: 16px;
 }
+.arrow-left:hover{
+  background-color: black;
+  color: white;
+  transition: 0.8s;
+}
+
+.arrow-right:hover {
+  background-color: black;
+  color: white;
+  transition: 0.8s;
+}
+
+
+
+
+
 .arrow-left{
   left: 1em;
 }
@@ -184,6 +265,7 @@ background: linear-gradient(90deg, rgb(243, 64, 61) 24%, rgb(63, 215, 235) 100%)
 }
 
 .gallery-item{
+  background-color: black;
   width: 300px;
   height: 350px;
   margin: 5px;
@@ -193,6 +275,10 @@ background: linear-gradient(90deg, rgb(243, 64, 61) 24%, rgb(63, 215, 235) 100%)
   transition: 1s ease;
 
 }
+.gallery-item p {
+  color: white;
+}
+
 
 .gallery-item:hover{
   transform: scale(0.9);
@@ -215,13 +301,27 @@ background: linear-gradient(90deg, rgb(243, 64, 61) 24%, rgb(63, 215, 235) 100%)
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 20px ;
 }
 .news-right{
-  width: 50%;
+  width: 55%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.news-right p{
+  margin: 20px 0;
+  text-align: center;
+}
+.news-right span {
+  margin-left: 15px;
+}
+
+
+
 .news-left{
-  width: 50%;
+  width: 45%;
 }
 
 
@@ -235,24 +335,25 @@ background: linear-gradient(90deg, rgb(243, 64, 61) 24%, rgb(63, 215, 235) 100%)
 
 
 /* footer section */
-
+.footer{
+  width: 100%;
+  background-image: url(assets/images/footer.jpg);
+  height: 50vh;
+}
 
 #footer{
-  width: 100%;
-  height: 30vh;
+
   padding: 10px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background: rgb(4, 224, 217);
-  background: linear-gradient(90deg, rgb(61, 243, 70) 24%, rgb(63, 215, 235) 100%);
-  
-  
+
 
 }
-
+#footer a {
+  color: white;
+}
 
 
 .footer-1 ,
@@ -261,6 +362,7 @@ background: linear-gradient(90deg, rgb(243, 64, 61) 24%, rgb(63, 215, 235) 100%)
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .footer-1{
@@ -282,6 +384,7 @@ background: linear-gradient(90deg, rgb(243, 64, 61) 24%, rgb(63, 215, 235) 100%)
 
 .footer-2{
   height: 15%;
+  
 }
 
 /* end of footer section */
@@ -303,177 +406,6 @@ background: linear-gradient(90deg, rgb(243, 64, 61) 24%, rgb(63, 215, 235) 100%)
 }
 
 /* end of scroll btn styles */
-
-
-
-
-
-/* header */
-.navbar{
-  background-color: rgb(30, 147, 30);
-  width: 100%;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-}
-
-.navbar ul{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0;
-}
-
-.navbar ul li {
-list-style: none;
-margin: 0 20px;
-}
-.navbar ul li a {
-  color: white;
-
-}
-
-
-/* slideshow */
-/* gallery */
-
-.gallery-header{
-  text-align: center;
-}
-
-.gallery-container{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50vh;
-  background-color: rgba(241, 218, 190, 0.4);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-
-
-}
-
-
-.slider-wrapper{
-position: relative;
-
-}
-.slider-button{
-  position: absolute;
-  background-color: black;
-  color: white;
-  top: 50%;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  border-radius: 50%;
-  border: none;
-  outline: none;
-  transform: translateY(-50%);
-
-}
-.slider-button:hover{
-  background-color: white;
-  color: black;
-}
-
-
-
-.slider-button span{
-  font-size: 2rem;
-
-}
-#prev-slide{
-left: -20px;
-
-}
-#next-slide{
-right: -20px;
-}
-
-.slider-container{
-  max-width: 1200px;
-  width: 100%;
-}
-
-
-
-
-
-
-.slider-wrapper .img-list{
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(10 , 1fr);
-  font-size: 0;
-  overflow-x: auto;
-  scrollbar-width: none;
-  margin-bottom: 30px;
-
-}
-.slider-wrapper .img-list::-webkit-scrollbar{
-  display: none;
-}
-
-
-
-
-
-
-.slider-wrapper .img-list .img-item {
-  width: 325px;
-  height: 400px;
-  object-fit: cover;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* gallery */
-
-/* slideshow */
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* end of header */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 main {
@@ -519,7 +451,7 @@ main {
   }
   
   &:hover::after, &:hover .project-title, &:hover .project-subtitle {
-    opacity: 1;
+    opacity: 0.95;
   }
   
   .project-title {

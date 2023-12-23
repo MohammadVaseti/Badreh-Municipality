@@ -4,15 +4,15 @@ const arrRight = document.querySelector('.arrRight')
 const heading = document.querySelector('.caption h3')
 const desc = document.querySelector('.caption p')
 const images = [
-  "flower-purple-lical-blosso.jpg" , "kafari-canyon-4.jpg" , "flower-purple-lical-blosso.jpg" 
+  "beach.jpg" , "kafari-canyon-4.jpg" , "flower-purple-lical-blosso.jpg" 
 ]
 
 const headings = [
-  'semnannnnnnnnnnnn' , 'kafarin' , 'gol'
+  'عنوان تصویر' , 'عنوان تصویر' , 'عنوان تصویر'
 ]
 
 const descs = [
-  'this is flower' , 'this is kafarin' , 'again flower'
+  'متن تصویر مورد نظر' , 'متن تصویر مورد نظر' , 'متن تصویر مورد نظر'
 ]
 
 let id = 0
